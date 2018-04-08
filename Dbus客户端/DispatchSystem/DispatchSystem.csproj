@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{220F810A-2641-4084-BFF7-35ED5AB1FE6D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DispatchSystem</RootNamespace>
+    <AssemblyName>AGV调度系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\robot.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DispatchSystem.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExpandableGridView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\参数上位机\ExpandableGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraDataChart.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Portable.Core.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Modbus, Version=1.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Modbus.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="Unme.Common, Version=1.1.0.0, Culture=neutral, PublicKeyToken=da57c01ae4598fdd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Unme.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AGV\ControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGV\ControlForm.Designer.cs">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGV\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGV\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGV\DisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGV\DisplayForm.Designer.cs">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGV\SetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGV\SetForm.Designer.cs">
+      <DependentUpon>SetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGV\StateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGV\StateForm.Designer.cs">
+      <DependentUpon>StateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\CanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer\CanForm.designer.cs">
+      <DependentUpon>CanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ModbusSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ModbusSetForm.Designer.cs">
+      <DependentUpon>ModbusSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\MonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\MonitorForm.Designer.cs">
+      <DependentUpon>MonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlHelper.cs" />
+    <Compile Include="Developer\DebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\ListenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer\ListenForm.Designer.cs">
+      <DependentUpon>ListenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Developer\DbusTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developer\DbusTestForm.Designer.cs">
+      <DependentUpon>DbusTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\AgvParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\AgvParameter.designer.cs">
+      <DependentUpon>AgvParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Process.designer.cs">
+      <DependentUpon>Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdAppResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThirdAppResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Base\LBIndustrialCtrlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Base\LBIndustrialCtrlBase.Designer.cs">
+      <DependentUpon>LBIndustrialCtrlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Base\Renderer.cs" />
+    <Compile Include="UserControls\Button\ButtonRenderer.cs" />
+    <Compile Include="UserControls\Button\LBButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Button\LBButton.Designer.cs">
+      <DependentUpon>LBButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Forklift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Forklift.designer.cs">
+      <DependentUpon>Forklift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\doubleBufferListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\doubleBufferListView.Designer.cs">
+      <DependentUpon>doubleBufferListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ini.cs" />
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AGV\SensorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGV\SensorForm.Designer.cs">
+      <DependentUpon>SensorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UdpConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UdpConfigForm.Designer.cs">
+      <DependentUpon>UdpConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UdpSever.cs" />
+    <Compile Include="UdpToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UdpToolForm.Designer.cs">
+      <DependentUpon>UdpToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Knob\KnobRenderer.cs" />
+    <Compile Include="UserControls\Knob\LBKnob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Knob\LBKnob.Designer.cs">
+      <DependentUpon>LBKnob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Led\LB7SegmentDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Led\LB7SegmentDisplay.Designer.cs">
+      <DependentUpon>LB7SegmentDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Led\LB7SegmentDisplayRenderer.cs" />
+    <Compile Include="UserControls\Led\LBLed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Led\LBLed.Designer.cs">
+      <DependentUpon>LBLed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Led\LedRenderer.cs" />
+    <Compile Include="UserControls\MagneticGuide16Bit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MagneticGuide16Bit.Designer.cs">
+      <DependentUpon>MagneticGuide16Bit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MagneticGuide8Bit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MagneticGuide8Bit.Designer.cs">
+      <DependentUpon>MagneticGuide8Bit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Meters\LBAnalogMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Meters\LBAnalogMeter.Designer.cs">
+      <DependentUpon>LBAnalogMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Meters\LBDigitalMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Meters\LBDigitalMeter.Designer.cs">
+      <DependentUpon>LBDigitalMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Meters\LBDigitalMeterRenderer.cs" />
+    <Compile Include="UserControls\Meters\LBMeterThreshold.cs" />
+    <Compile Include="UserControls\Meters\MeterRenderer.cs" />
+    <Compile Include="UserControls\RFID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RFID.Designer.cs">
+      <DependentUpon>RFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SignalLed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SignalLed.Designer.cs">
+      <DependentUpon>SignalLed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Utils\ColorMng.cs" />
+    <Compile Include="UserControls\Utils\MathFunc.cs" />
+    <EmbeddedResource Include="AGV\ControlForm.resx">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGV\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGV\DisplayForm.resx">
+      <DependentUpon>DisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGV\SetForm.resx">
+      <DependentUpon>SetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGV\StateForm.resx">
+      <DependentUpon>StateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer\DebugForm.resx">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer\CanForm.resx">
+      <DependentUpon>CanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer\ListenForm.resx">
+      <DependentUpon>ListenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developer\DbusTestForm.resx">
+      <DependentUpon>DbusTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\AgvParameter.resx">
+      <DependentUpon>AgvParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\AgvParameter.zh-CN.resx">
+      <DependentUpon>AgvParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Process.resx">
+      <DependentUpon>Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ThirdAppResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ThirdAppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Button\LBButton.resx">
+      <DependentUpon>LBButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Forklift.resx">
+      <DependentUpon>Forklift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\doubleBufferListView.resx">
+      <DependentUpon>doubleBufferListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGV\SensorForm.resx">
+      <DependentUpon>SensorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UdpConfigForm.resx">
+      <DependentUpon>UdpConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UdpToolForm.resx">
+      <DependentUpon>UdpToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Knob\LBKnob.resx">
+      <DependentUpon>LBKnob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Led\LB7SegmentDisplay.resx">
+      <DependentUpon>LB7SegmentDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Led\LBLed.resx">
+      <DependentUpon>LBLed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MagneticGuide16Bit.resx">
+      <DependentUpon>MagneticGuide16Bit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MagneticGuide8Bit.resx">
+      <DependentUpon>MagneticGuide8Bit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Meters\LBDigitalMeter.resx">
+      <DependentUpon>LBDigitalMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RFID.resx">
+      <DependentUpon>RFID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SignalLed.resx">
+      <DependentUpon>SignalLed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ModbusSetForm.resx">
+      <DependentUpon>ModbusSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\MonitorForm.resx">
+      <DependentUpon>MonitorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\DispatchSystem.User.TaskForm+TaskData.datasource" />
+    <None Include="Properties\DataSources\XmlHelper.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="User\说明.txt" />
+    <None Include="bin\Debug\参数上位机\newGroupPostIconStrip.PNG" />
+    <Content Include="Dbus协议细节.txt" />
+    <Content Include="Readme.txt" />
+    <None Include="Resources\NetAssist.exe" />
+    <None Include="Resources\XCOM V2.0.exe" />
+    <None Include="Resources\RFID.exe" />
+    <None Include="Resources\Animal Tag Read-Writer.exe" />
+    <None Include="Resources\3.jpg" />
+    <Content Include="UserControls\Knob\Knob.bmp" />
+    <None Include="Resources\8bit.png" />
+    <None Include="Resources\16bit.png" />
+    <None Include="Resources\RFID.png" />
+    <Content Include="Resources\robot.ico" />
+    <Content Include="Resources\robot2.ico" />
+    <Content Include="Resources\robot3.ico" />
+    <Content Include="Resources\编辑.png" />
+    <Content Include="Resources\编辑2.png" />
+    <None Include="Resources\task.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\配置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
